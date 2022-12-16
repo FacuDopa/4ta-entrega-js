@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="En la sección de contacto, te ofrecemos completar un formulario para solicitar, un trabajo, un presupuesto o para pedir que nos contactemos para llegar a un acuerdo.">
+  <meta name="keywords" content="FORMULARIO, CONTACTO, EMAIL, WHATSAPP, TELEFONO">
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+  <!-- Link a css -->
+  <link rel="stylesheet" href="../css/estilos.css">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <!-- cdnjs para iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- animated css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <title>CarpinteriaJ&R | Contacto</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <!-- logo y nombre -->
+        <a href="#">
+          <div class="cont-logo">
+            <img src="../img/logo.png" alt="logo carpinteriaJyR" class="rounded-circle img-fluid">
+            <span>CarpinteriaJ&R Desings</span>
+          </div>
+        </a>
+  
+        <button class="navbar-toggler border-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- enlaces de la barra de navegacion -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./servicios.html">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="./galeria.html">Galería</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="./ubicacion.html">Ubicación</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main-contacto">
+    <div class="container-fluid mt-2">
+      <h2 class="t-cont">
+        <i class="fa-solid fa-hammer fa-shake" style="--fa-animation-duration: 5s;"></i>
+        Nuestro Contacto
+      </h2>
+      <p class="p-cont">
+        En esta sección podes contactarnos completando el siguiente formulario, en el apartado de comentarios podes detallar el motivo del contacto, luego podes ingresar el método con el que nos comunicaremos con usted
+        Muchas gracias por visitar nuestra página
+      </p>
+    </div>
+
+    <!-- inicio del formulario -->
+    <section class="sec-formulario container-fluid mb-3">
+
+      <form class="formulario" id="form" name="contacto">
+
+        <h2 class="t-cont mt-3">Tus Datos</h2>
+
+        <div class="form-floating my-3">
+          <input class="form-control borde" id="input_nombre" name="input_nombre" type="text" placeholder="nombre">
+          <label for="input_nombre">Nombre:</label>
+        </div>
+        
+        <div class="form-floating mb-3">
+          <input class="form-control borde" id="input_email" name="input_email" type="email" placeholder="Introduce tu Email">
+          <label for="input_email">Introduce tu email:</label>
+        </div>
+        
+        <div class="form-floating mb-3">
+          <input class="form-control borde" id="input_wpp" name="input_wpp" type="number" placeholder="telefono">
+          <label for="input_wpp">Nro de Whatsapp:</label>
+        </div>
+
+        <div>
+          <label for="text_area">Sección de Comentarios</label> <br>
+          <textarea id="text_area" name="text_area" rows="8" placeholder="(Si tienes Productos en el carrito se enviaran automaticamente con este correo)"></textarea>
+        </div>
+
+        <div class="boton my-2">
+          <input type="submit" value="Enviar" id="button" disabled></input>
+        </div>
+
+        <div id="carrito"></div>
+      </form>
+
+    </section>
+  </main>
+
+
+  <footer>
+    <marquee scrollamount="15" behavior="alternate" direction="right" class="m-footer">Seguinos en Nuestras Redes Sociales</marquee>
+
+    <p class="p-footer">Seguinos en Nuestras Redes Sociales</p>
+    
+    <section class="redes">
+      <div class="container-fluid">
+        <a class="wpp" href="https://wa.me/c/5491133370121"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+  
+      <div class="container-fluid">
+        <a class="ig" href="https://www.instagram.com/trabajos_en_pino/"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+  
+      <div class="container-fluid">
+        <a class="fc" href="https://www.facebook.com/profile.php?id=100063762870269"><i class="fa-brands fa-facebook"></i></a>
+      </div>
+    </section>
+  </footer>
+
+  <!-- emailJs  -->
+  <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function(){
+      emailjs.init("FcMjx-wNWKyHKlyRQ");
+    })();
+  </script>
+
+  <!-- script de bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+  <!-- script Sweet Alert -->
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script src="../js/mainFormulario.js"></script>
+</body>
+</html>

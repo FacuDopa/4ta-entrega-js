@@ -1,0 +1,860 @@
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chango&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+// estilos alerta de Toastify
+.noti-toastify{
+  border-radius: 15px;
+  background: goldenrod;
+
+  .toast-close{
+    font-family: none;
+    color: black;
+    font-size: 20px;
+    right: 0px;
+  }
+}
+
+// alerta del Sweet-Alert
+.swal2-popup{
+  border: 2px solid black !important;
+  border-radius: 15px !important;
+  background-image: url(../img/fondo-svg1.svg) !important;
+}
+
+.wpp-alerta{
+  padding-left: 5px;
+  color: rgb(14, 193, 67);
+  text-decoration: none;
+
+  &:hover{
+    color: rgb(71, 223, 116);
+  }
+
+}
+
+.oculto{
+  display: none;
+}
+
+// Inicio de variables
+
+// color letras barra de navegacion
+$logo-a-color: rgb(255 193 7);
+
+// Fuente del nav y footer
+$vollkorn: 'Vollkorn', serif;
+
+// fuente textos
+$Titan-one: 'Titan One', cursive;
+
+$sombra-nav: 8px 2px 10px black;
+
+// Breakpoint Animaciones
+$menos-rec: 1300px;
+
+// fin variables
+
+// propiedades generales
+%titulos{
+  text-shadow: 0px 0px 4px rgb(77 38 6);
+  font-size: 40px;
+  font-family: 'Permanent Marker', cursive;
+  color: black;
+
+    // meida queries de los parrafos (general- puede varirar luego en cada seccion)
+
+    @media screen and (max-width: 484px) {
+      font-size: 28px;
+    }
+
+    @media screen and (max-width: 346px) {
+      font-size: 20px;
+    }
+}
+
+%parrafos{
+  font-family: $Titan-one;
+  font-size: 25px;
+  color: rgb(77, 38, 6);
+
+  // meida queries de los parrafos (general- puede varirar luego en cada seccion)
+
+  @media screen and (max-width: 484px) {
+    font-size: 18px;
+  }
+
+  @media screen and (max-width: 346px) {
+    font-size: 15px;
+  }
+}
+
+%bordes-contactos{
+  border: 2px solid;
+  border-image: linear-gradient(43deg, #cfa20e 13%, #000000 94%);
+  border-image-slice: 1;
+}
+
+%texto-footer{
+  color: $logo-a-color;
+  text-shadow: $sombra-nav;
+  font-size: 25px;
+  margin: 0;
+  font-family: $vollkorn;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  padding-left: 10px;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// -inicio -css -header-nav global-
+nav{ 
+  background-image: url(../img/fondo-nav-footer.svg);
+  background-repeat: no-repeat;
+  transition: background-image 0.5s;
+
+  @media screen and (min-width: $menos-rec) {
+    
+    &:hover{
+      background-image: url(../img/fondo-nav-hover.svg);
+      background-size: cover;
+      transition: background-image 0.5s;
+    }
+  }
+
+  @media screen and (min-width: 900px) {
+    background-size: 100%;
+  }
+
+  @media screen and (max-width: 900px) {
+    background-image: url(../img/fondo-nav-footer-mobil.jpg);
+    background-size: cover;
+
+  }
+
+  // logo
+  a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 768px) {
+      img{
+        width: 15%;
+        height: auto;
+      }
+    }
+
+    span{
+      font-size: 25px;
+      padding-left: 10px;
+      color: $logo-a-color;
+      font-family: $vollkorn;
+
+      @media screen and (max-width: 490px) {
+        font-size: 20px;
+      }
+
+      @media screen and (max-width: 385px) {
+        font-size: 15px;
+      }
+
+      @media screen and (max-width: 333px) {
+        font-size: 12px;
+      }
+    }
+  }
+
+  #navbarNav{
+    justify-content: flex-end;
+
+    ul{
+      font-size:25px;
+
+      li{
+        padding-left: 20px;
+        a{
+          text-shadow: $sombra-nav;
+          font-family: $vollkorn;
+          color: $logo-a-color;
+          position: relative;
+          padding: 0;
+          transition: transform 0.5s;
+
+          &.active{
+            color: white;
+            transform: scale(1.08);
+            transition: transform 0.5s;
+
+            &::after{
+              content: '';
+              border-bottom: 3px solid black;
+              bottom: 0px;
+              left: 0px;
+              position: absolute;
+              width: 10%;
+              opacity: 0;
+              transition: 0.5s;
+            }
+
+            &::after{
+              opacity: 1;
+              width: 100%;
+            }
+
+            @media screen and (max-width: $menos-rec) {
+              transform: scale(1);
+            }
+          }
+
+
+          @media screen and (min-width: $menos-rec) {
+            &::after{
+              content: '';
+              border-bottom: 3px solid black;
+              bottom: 0px;
+              left: 0px;
+              position: absolute;
+              width: 10%;
+              opacity: 0;
+              transition: 0.5s;
+            }
+  
+  
+    
+            &:hover::after, &.active::after{
+              opacity: 1;
+              width: 100%;
+            }
+    
+            &:hover{
+              color: white;
+              transform: scale(1.08);
+              transition: transform 0.5s;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// -inicio -css -index
+h1{
+  text-align: center;
+  padding: 20px 0px;
+  background-image: url(../img/fondo-h1.jpeg);
+  margin: 10px 0 10px 0 !important;
+  border: 3px dotted black;
+  font-family: 'Chango', cursive;
+
+  @media screen and (max-width: 520px) {
+    font-size: 25px !important;
+  }
+  
+  @media screen and (max-width: 358px) {
+    font-size: 20px !important;
+  }
+}
+
+.carousel-index{
+  margin-bottom: 10px;
+  border: 1px solid black;
+  background-color: rgb(92 57 10 / 82%);
+}
+
+.main-index{
+  .secc-nosotros{
+    margin-top: 20px;
+    .t-index{
+      @extend %titulos;
+    }
+    .p-index{
+      @extend %parrafos;
+
+      @media screen and (max-width: 991px) {
+        margin-bottom: 25px;
+      }
+
+      span{
+        text-decoration: underline;
+        font-weight: 600;
+
+        a{
+          color: rgb(77, 38, 6);
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+// -inicio -css -servicios
+.main-servicios{
+  .t-serv{
+    @extend %titulos;
+
+    // meida queries
+    @media screen and (max-width: 954px) {
+      font-size: 33px;
+    }
+
+    @media screen and (max-width: 694px) {
+      font-size: 28px;
+    }
+    
+    @media screen and (max-width: 480px) {
+      font-size: 20px;
+    }
+    
+    @media screen and (max-width: 350px) {
+      font-size: 18px;
+    }
+    
+  }
+
+  .p-serv{
+    @extend %parrafos;
+
+    // media queries
+    @media screen and (max-width: 954px) {
+      font-size: 18px;
+    }
+
+    @media screen and (max-width: 694px) {
+      font-size: 16px;
+    }
+
+    @media screen and (max-width: 583px) {
+      font-size: 12px;
+    }
+
+    // -------------------------------------------------------------------------------------------------- //
+
+    span{
+      text-decoration: underline;
+    }
+
+  }
+
+  .sec-cards{
+    justify-content: space-around;
+    color: white;
+
+    .card{
+      width: 400px;
+      margin-top: 15px;
+      background-color: rgb(101 59 2 / 84%);
+      transition: transform 0.5s;
+      display: flex;
+
+      .card-body{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .boton-cards{
+        color: rgb(136, 81, 5);
+        // background-color: rgb(0, 0, 0);
+        background-color: white;
+        border: rgb(90, 54, 3);
+        border-radius: 50px;
+        font-size: 16px;
+        width: 50%;
+        justify-content: center;
+        height: 30px;
+        font-weight: 650;
+
+        @media screen and (min-width :$menos-rec) {
+          &:hover{
+            box-shadow: 0px 0px 7px 4px rgb(90, 54, 3);;
+            transform: scale(1.05);
+            transition: transform 0.7s;
+          }
+        }
+      }
+      // media querie
+      @media screen and (min-width: $menos-rec) {
+        &:hover{
+          box-shadow: 0px 4px 9px 5px #60686f;
+          transform: translatey(-10px);
+          transition: transform 0.7s;
+        }
+      }
+
+      @media screen and (max-width: 470px) {
+        width: 300px;
+      }
+
+      @media screen and (max-width: 425px) {
+        h4{
+          font-size: 20px;
+        }
+        
+        p{
+          font-size: 15px;
+        }
+      }
+
+      img{
+        padding-top: 5px;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  .seccion-carrito{
+    border: 3px solid black;
+    border-radius: 10px;
+    margin: 0px 50px 10px 50px;
+    background-color: rgb(101 59 2 / 84%);
+    color: wheat;
+
+    animation: fadeIn 2s;
+
+    @keyframes fadeIn {
+      0% {opacity: 0;}
+      100% {opacity: 1;}
+    }
+    
+    .tabla-carrito{
+      display: flex;
+      justify-content: space-around;
+      border-bottom: 3px solid white;
+      border-radius: 6px;
+      font-family: $Titan-one;
+      letter-spacing: 1.2px;
+      color: rgb(77, 57, 23);
+      text-shadow: 0px 1px 4px white;
+    }
+    
+    .div-carrito{
+      display: flex;
+      justify-content: center;
+      padding-top: 6px;
+
+      @media screen and (min-width: $menos-rec) {
+        &:hover{
+          background-color: rgb(164, 119, 42);
+          box-shadow: 0 0 4px 1px rgb(173, 181, 189);
+          transition: 0.7s;
+        }
+      }
+      
+      .nombre-carrito{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+      }
+      
+      .precio-carrito{
+        @extend .nombre-carrito
+      }
+    }
+
+    #precio-final{
+      border-top: 3px solid white;
+      border-radius: 6px;
+    }
+  }
+  
+  #boton-eliminar{
+    
+
+    #eliminar-carrito{
+      border-radius: 10px;
+      margin-bottom: 10px;
+      margin-left: 50px;
+      width: 160px;
+      justify-content: center;
+      font-size: 18px;
+      background-color: rgb(132 93 38);
+      color: wheat;
+      font-weight: 500;
+      transition: 0.5s;
+      
+      @media screen and (min-width: $menos-rec) {
+        &:hover{
+          transform: scale(1.1);
+          background-color: rgb(150, 18, 18);
+          transition: 0.5s;
+          color: rgb(0, 0, 0);
+        }
+      }
+    }
+    
+    .ocultar{
+      display: none;
+    }
+
+    .mostrar{
+      display: flex;
+      animation: fadeIn 2s;
+      @keyframes fadeIn {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+      }
+    }
+  }
+}
+
+// -inicio -css -galeria
+@mixin galeria($cstart, $cend, $rowstart, $rowend, $bg_size) {
+  grid-column-start: $cstart;
+  grid-column-end: $cend;
+  grid-row-start: $rowstart;
+  grid-row-end: $rowend;
+  background-size: $bg_size;
+}
+
+.main-galeria{
+  background-image: url(../img/imagen_fondo_galeria.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  
+  .t-galeria{
+    @extend %titulos;
+    text-align: center;
+    text-shadow: 0 0 13px white, 0 0 13px white;
+  }
+
+  .galeria{
+    width: 97%;
+    margin-left: 1.5%;
+    padding-bottom: 20px;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 500px);
+    grid-gap: 15px;
+    
+    .img{
+      border: 2px solid black;
+      border-radius: 20px;
+      background-position: center;
+      transition: transform 0.8s, background-image 0.6s;
+
+      @media screen and (min-width: $menos-rec) {
+        &:hover{
+          transform: scale(1.02);
+          transition: transform 0.8s, background-image 0.6s;
+        } 
+      }
+    }
+      
+    .img1{
+      @include galeria(1, 2, 1, 3, cover);
+      background-image: url(../img/proceso1.jpg);
+    }
+      
+    .img2{
+      @include galeria(2, 4, 1, 2, cover);
+      background-image: url(../img/img-carrusel2-img-galeria.jpg);
+    }
+      
+    .img3{
+      @include galeria(2, 3, 2, 3, cover);
+      background-image: url(../img/mueble1.jpg);
+    }
+      
+    .img4{
+      @include galeria(3, 4, 2, 4, cover);
+      background-image: url(../img/porta_joystick.jpg);
+      
+      @media screen and (min-width: $menos-rec) {
+        &:hover{
+          background-image: url(../img/porta_joystick-1.jpg);
+          background-size: cover;
+        }
+      }
+    }
+      
+    .img5{
+      @include galeria(1, 2, 3, 4, cover);
+      background-image: url(../img/banco.jpg);
+    }
+      
+    .img6{
+      @include galeria(2, 3, 3, 4, cover);
+      background-image: url(../img/lapicero.jpeg);
+      background-position: center;
+
+      @media screen and (min-width: $menos-rec) {
+        &:hover{
+          background-image: url(../img/lapicero-2.jpg);
+          background-size: cover;
+        }
+      }
+    }
+  }
+}
+
+@import "mediaqueries-galeria";
+
+// -inicio -css -ubicacion
+.main-ubicacion{
+
+  .t-ubi{
+    @extend %titulos;
+    text-align: center;
+  }
+
+  .horario-direccion{
+
+    section{
+      margin-top: 20px;
+      article{
+        display: flex;
+        border-bottom: 1px solid #000;
+        padding-top: 10px;
+
+        .icono{
+          width: 50px;
+          height: auto;
+          text-align: center;
+    
+          i{
+            font-size: 30px;
+          }
+        }
+
+        h3{
+          display: flex;
+          align-items: center;
+          padding-left: 5px;
+          font-family: $Titan-one;
+          font-size: 20px;
+
+          @media screen and (max-width: 640px) {
+            font-size: 20px;
+          }
+
+          @media screen and (max-width: 500px) {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  .img-taller{
+    flex-wrap: nowrap;
+    margin-bottom: 10px;
+
+    img{
+      width: 50%;
+      border: 2px solid black;
+
+      @media screen and (min-width: $menos-rec) {
+        &{
+          filter: grayscale(100%);
+          transition: filter 0.5s;
+  
+          &:hover{
+            filter: grayscale(0%);
+            transition: filter 0.5s;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+// -inicio -css -contacto
+.main-contacto{
+  .t-cont{
+    @extend %titulos;
+  }
+
+  .p-cont{
+    @extend %parrafos;
+  }
+  
+  .sec-formulario{
+    width: 70%;
+    border: 5px solid gray;
+    border-image: linear-gradient(43deg, #000000 25%, #cfa20e 81%);
+    border-image-slice: 1;
+    transition: border-image 0.5s;
+
+    @media screen and (max-width: 425px) {
+      width: 90%;
+    }
+
+    @media screen and (min-width: $menos-rec) {
+      &:hover{
+        border-image: linear-gradient(43deg, #cfa20e 13%, #000000 94%);
+        border-image-slice: 1;
+        transition: border-image 0.5s;
+      }
+    }
+    
+    .formulario{
+      // color de letras del formulario
+      color: brown;
+
+      // titulo
+      .t-cont{
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      // hover y focus para las sig etiquetas y clases
+      .borde, textarea, .metodo-cont{
+        border-color: black;
+
+        &:hover{
+          @extend %bordes-contactos;
+        }
+
+        &:focus{
+          @extend %bordes-contactos;
+          box-shadow: none;
+        }
+      }
+      
+      // metodo de contacto
+      .metodo-cont{
+        border: 1px solid black;
+        border-radius: 6px;
+        padding-left: 10px;
+      }
+  
+      textarea{
+        width: 100%;
+        @extend .metodo-cont;
+      }
+
+      .boton{
+        input{
+          &:hover{
+            @extend %bordes-contactos;
+          }
+          border-radius: 7px;
+          padding: 5px;
+        }
+      }
+    }
+  }
+}
+
+// -inicio -css -footer global-
+footer{
+  background-image: url(../img/fondo-nav-footer.svg);
+  border-top: 2px solid #262425;
+
+  .m-footer{
+    @extend %texto-footer;
+
+    @media screen and (max-width: 580px) {
+      font-size: 15px;
+    }
+
+    @media screen and (max-width: 401px) {
+      display: none;
+    }
+
+  }
+
+  .p-footer{
+    @extend %texto-footer;
+    display: none;
+
+    @media screen and (max-width: 580px) {
+      font-size: 15px;
+    }
+
+    @media screen and (max-width: 400px) {
+      display: inline-block;
+    }
+  }
+
+  .redes{
+    width: 100%;
+    font-size: 40px;
+    align-content: center;
+    display: flex;
+
+    @media screen and (max-width: 451px) {
+      font-size: 30px;
+    }
+
+    div{
+
+      @media screen and (max-width: $menos-rec) {
+        padding-bottom: 15px;
+      }
+
+      a{
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        text-decoration: none;
+        
+        @media screen and (min-width: $menos-rec) {        
+          transition: 0.5s;
+          &.wpp:hover{
+            color: rgb(14, 193, 67);
+          }      
+          
+          &.ig:hover{
+            color: rgb(218, 5, 94);
+          }
+    
+          &.fc:hover{
+            color: rgb(16, 150, 244);
+          }
+    
+    //   afters y hovers para los textos al lado de cada icono
+    
+          &.wpp::after, &.ig::after, &.fc::after{
+            font-family: $vollkorn;
+            font-size: 20px;
+            opacity: 0;
+            transition: 0.5s;
+            display: flex;
+            justify-content: center;
+          }
+    
+          // whatsapp
+          &.wpp::after{
+            content: 'Nuestro Whatsapp';
+            color: rgb(14, 193, 67);
+          }
+    
+          // instagram
+          &.ig::after{
+            content: 'Nuestro Instagram';
+            color: rgb(235, 1, 98);
+          }
+    
+          // facebook
+          &.fc::after{
+            content: 'Nuestro Facebook';
+            color: rgb(16, 150, 244);
+          }
+    
+          // hover after de las 3 redes
+          &.wpp:hover::after, &.ig:hover::after, &.fc:hover::after{
+            opacity: 1;
+            padding-left: 10px;
+            transition: 0.5s;
+          }
+        }
+        // hover de los iconos
+
+        i{
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}

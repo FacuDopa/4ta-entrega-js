@@ -1,0 +1,808 @@
+@import url("https://fonts.googleapis.com/css2?family=Vollkorn&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chango&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Titan+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+.noti-toastify {
+  border-radius: 15px;
+  background: goldenrod;
+}
+.noti-toastify .toast-close {
+  font-family: none;
+  color: black;
+  font-size: 20px;
+  right: 0px;
+}
+
+.swal2-popup {
+  border: 2px solid black !important;
+  border-radius: 15px !important;
+  background-image: url(../img/fondo-svg1.svg) !important;
+}
+
+.wpp-alerta {
+  padding-left: 5px;
+  color: rgb(14, 193, 67);
+  text-decoration: none;
+}
+.wpp-alerta:hover {
+  color: rgb(71, 223, 116);
+}
+
+.oculto {
+  display: none;
+}
+
+.main-contacto .t-cont, .main-ubicacion .t-ubi, .main-galeria .t-galeria, .main-servicios .t-serv, .main-index .secc-nosotros .t-index {
+  text-shadow: 0px 0px 4px rgb(77, 38, 6);
+  font-size: 40px;
+  font-family: "Permanent Marker", cursive;
+  color: black;
+}
+@media screen and (max-width: 484px) {
+  .main-contacto .t-cont, .main-ubicacion .t-ubi, .main-galeria .t-galeria, .main-servicios .t-serv, .main-index .secc-nosotros .t-index {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 346px) {
+  .main-contacto .t-cont, .main-ubicacion .t-ubi, .main-galeria .t-galeria, .main-servicios .t-serv, .main-index .secc-nosotros .t-index {
+    font-size: 20px;
+  }
+}
+
+.main-contacto .p-cont, .main-servicios .p-serv, .main-index .secc-nosotros .p-index {
+  font-family: "Titan One", cursive;
+  font-size: 25px;
+  color: rgb(77, 38, 6);
+}
+@media screen and (max-width: 484px) {
+  .main-contacto .p-cont, .main-servicios .p-serv, .main-index .secc-nosotros .p-index {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 346px) {
+  .main-contacto .p-cont, .main-servicios .p-serv, .main-index .secc-nosotros .p-index {
+    font-size: 15px;
+  }
+}
+
+.main-contacto .sec-formulario .formulario .boton input:hover, .main-contacto .sec-formulario .formulario .borde:focus, .main-contacto .sec-formulario .formulario textarea:focus, .main-contacto .sec-formulario .formulario .metodo-cont:focus, .main-contacto .sec-formulario .formulario .borde:hover, .main-contacto .sec-formulario .formulario textarea:hover, .main-contacto .sec-formulario .formulario .metodo-cont:hover, .main-contacto .sec-formulario .formulario textarea:hover {
+  border: 2px solid;
+  border-image: linear-gradient(43deg, #cfa20e 13%, #000000 94%);
+  border-image-slice: 1;
+}
+
+footer .p-footer, footer .m-footer {
+  color: rgb(255, 193, 7);
+  text-shadow: 8px 2px 10px black;
+  font-size: 25px;
+  margin: 0;
+  font-family: "Vollkorn", serif;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  padding-left: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  background-image: url(../img/fondo-nav-footer.svg);
+  background-repeat: no-repeat;
+  transition: background-image 0.5s;
+}
+@media screen and (min-width: 1300px) {
+  nav:hover {
+    background-image: url(../img/fondo-nav-hover.svg);
+    background-size: cover;
+    transition: background-image 0.5s;
+  }
+}
+@media screen and (min-width: 900px) {
+  nav {
+    background-size: 100%;
+  }
+}
+@media screen and (max-width: 900px) {
+  nav {
+    background-image: url(../img/fondo-nav-footer-mobil.jpg);
+    background-size: cover;
+  }
+}
+nav a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  nav a img {
+    width: 15%;
+    height: auto;
+  }
+}
+nav a span {
+  font-size: 25px;
+  padding-left: 10px;
+  color: rgb(255, 193, 7);
+  font-family: "Vollkorn", serif;
+}
+@media screen and (max-width: 490px) {
+  nav a span {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 385px) {
+  nav a span {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 333px) {
+  nav a span {
+    font-size: 12px;
+  }
+}
+nav #navbarNav {
+  justify-content: flex-end;
+}
+nav #navbarNav ul {
+  font-size: 25px;
+}
+nav #navbarNav ul li {
+  padding-left: 20px;
+}
+nav #navbarNav ul li a {
+  text-shadow: 8px 2px 10px black;
+  font-family: "Vollkorn", serif;
+  color: rgb(255, 193, 7);
+  position: relative;
+  padding: 0;
+  transition: transform 0.5s;
+}
+nav #navbarNav ul li a.active {
+  color: white;
+  transform: scale(1.08);
+  transition: transform 0.5s;
+}
+nav #navbarNav ul li a.active::after {
+  content: "";
+  border-bottom: 3px solid black;
+  bottom: 0px;
+  left: 0px;
+  position: absolute;
+  width: 10%;
+  opacity: 0;
+  transition: 0.5s;
+}
+nav #navbarNav ul li a.active::after {
+  opacity: 1;
+  width: 100%;
+}
+@media screen and (max-width: 1300px) {
+  nav #navbarNav ul li a.active {
+    transform: scale(1);
+  }
+}
+@media screen and (min-width: 1300px) {
+  nav #navbarNav ul li a::after {
+    content: "";
+    border-bottom: 3px solid black;
+    bottom: 0px;
+    left: 0px;
+    position: absolute;
+    width: 10%;
+    opacity: 0;
+    transition: 0.5s;
+  }
+  nav #navbarNav ul li a:hover::after, nav #navbarNav ul li a.active::after {
+    opacity: 1;
+    width: 100%;
+  }
+  nav #navbarNav ul li a:hover {
+    color: white;
+    transform: scale(1.08);
+    transition: transform 0.5s;
+  }
+}
+
+h1 {
+  text-align: center;
+  padding: 20px 0px;
+  background-image: url(../img/fondo-h1.jpeg);
+  margin: 10px 0 10px 0 !important;
+  border: 3px dotted black;
+  font-family: "Chango", cursive;
+}
+@media screen and (max-width: 520px) {
+  h1 {
+    font-size: 25px !important;
+  }
+}
+@media screen and (max-width: 358px) {
+  h1 {
+    font-size: 20px !important;
+  }
+}
+
+.carousel-index {
+  margin-bottom: 10px;
+  border: 1px solid black;
+  background-color: rgba(92, 57, 10, 0.82);
+}
+
+.main-index .secc-nosotros {
+  margin-top: 20px;
+}
+@media screen and (max-width: 991px) {
+  .main-index .secc-nosotros .p-index {
+    margin-bottom: 25px;
+  }
+}
+.main-index .secc-nosotros .p-index span {
+  text-decoration: underline;
+  font-weight: 600;
+}
+.main-index .secc-nosotros .p-index span a {
+  color: rgb(77, 38, 6);
+  font-weight: 500;
+}
+
+@media screen and (max-width: 954px) {
+  .main-servicios .t-serv {
+    font-size: 33px;
+  }
+}
+@media screen and (max-width: 694px) {
+  .main-servicios .t-serv {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .main-servicios .t-serv {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .main-servicios .t-serv {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 954px) {
+  .main-servicios .p-serv {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 694px) {
+  .main-servicios .p-serv {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 583px) {
+  .main-servicios .p-serv {
+    font-size: 12px;
+  }
+}
+.main-servicios .p-serv span {
+  text-decoration: underline;
+}
+.main-servicios .sec-cards {
+  justify-content: space-around;
+  color: white;
+}
+.main-servicios .sec-cards .card {
+  width: 400px;
+  margin-top: 15px;
+  background-color: rgba(101, 59, 2, 0.84);
+  transition: transform 0.5s;
+  display: flex;
+}
+.main-servicios .sec-cards .card .card-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.main-servicios .sec-cards .card .boton-cards {
+  color: rgb(136, 81, 5);
+  background-color: white;
+  border: rgb(90, 54, 3);
+  border-radius: 50px;
+  font-size: 16px;
+  width: 50%;
+  justify-content: center;
+  height: 30px;
+  font-weight: 650;
+}
+@media screen and (min-width: 1300px) {
+  .main-servicios .sec-cards .card .boton-cards:hover {
+    box-shadow: 0px 0px 7px 4px rgb(90, 54, 3);
+    transform: scale(1.05);
+    transition: transform 0.7s;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .main-servicios .sec-cards .card:hover {
+    box-shadow: 0px 4px 9px 5px #60686f;
+    transform: translatey(-10px);
+    transition: transform 0.7s;
+  }
+}
+@media screen and (max-width: 470px) {
+  .main-servicios .sec-cards .card {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .main-servicios .sec-cards .card h4 {
+    font-size: 20px;
+  }
+  .main-servicios .sec-cards .card p {
+    font-size: 15px;
+  }
+}
+.main-servicios .sec-cards .card img {
+  padding-top: 5px;
+  border-radius: 10px;
+}
+.main-servicios .seccion-carrito {
+  border: 3px solid black;
+  border-radius: 10px;
+  margin: 0px 50px 10px 50px;
+  background-color: rgba(101, 59, 2, 0.84);
+  color: wheat;
+  animation: fadeIn 2s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.main-servicios .seccion-carrito .tabla-carrito {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 3px solid white;
+  border-radius: 6px;
+  font-family: "Titan One", cursive;
+  letter-spacing: 1.2px;
+  color: rgb(77, 57, 23);
+  text-shadow: 0px 1px 4px white;
+}
+.main-servicios .seccion-carrito .div-carrito {
+  display: flex;
+  justify-content: center;
+  padding-top: 6px;
+}
+@media screen and (min-width: 1300px) {
+  .main-servicios .seccion-carrito .div-carrito:hover {
+    background-color: rgb(164, 119, 42);
+    box-shadow: 0 0 4px 1px rgb(173, 181, 189);
+    transition: 0.7s;
+  }
+}
+.main-servicios .seccion-carrito .div-carrito .nombre-carrito, .main-servicios .seccion-carrito .div-carrito .precio-carrito {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+.main-servicios .seccion-carrito #precio-final {
+  border-top: 3px solid white;
+  border-radius: 6px;
+}
+.main-servicios #boton-eliminar #eliminar-carrito {
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  width: 160px;
+  justify-content: center;
+  font-size: 18px;
+  background-color: rgb(132, 93, 38);
+  color: wheat;
+  font-weight: 500;
+  transition: 0.5s;
+}
+@media screen and (min-width: 1300px) {
+  .main-servicios #boton-eliminar #eliminar-carrito:hover {
+    transform: scale(1.1);
+    background-color: rgb(150, 18, 18);
+    transition: 0.5s;
+    color: rgb(0, 0, 0);
+  }
+}
+.main-servicios #boton-eliminar .ocultar {
+  display: none;
+}
+.main-servicios #boton-eliminar .mostrar {
+  display: flex;
+  animation: fadeIn 2s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.main-galeria {
+  background-image: url(../img/imagen_fondo_galeria.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+}
+.main-galeria .t-galeria {
+  text-align: center;
+  text-shadow: 0 0 13px white, 0 0 13px white;
+}
+.main-galeria .galeria {
+  width: 97%;
+  margin-left: 1.5%;
+  padding-bottom: 20px;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 500px);
+  grid-gap: 15px;
+}
+.main-galeria .galeria .img {
+  border: 2px solid black;
+  border-radius: 20px;
+  background-position: center;
+  transition: transform 0.8s, background-image 0.6s;
+}
+@media screen and (min-width: 1300px) {
+  .main-galeria .galeria .img:hover {
+    transform: scale(1.02);
+    transition: transform 0.8s, background-image 0.6s;
+  }
+}
+.main-galeria .galeria .img1 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  background-size: cover;
+  background-image: url(../img/proceso1.jpg);
+}
+.main-galeria .galeria .img2 {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  background-size: cover;
+  background-image: url(../img/img-carrusel2-img-galeria.jpg);
+}
+.main-galeria .galeria .img3 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background-size: cover;
+  background-image: url(../img/mueble1.jpg);
+}
+.main-galeria .galeria .img4 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  background-size: cover;
+  background-image: url(../img/porta_joystick.jpg);
+}
+@media screen and (min-width: 1300px) {
+  .main-galeria .galeria .img4:hover {
+    background-image: url(../img/porta_joystick-1.jpg);
+    background-size: cover;
+  }
+}
+.main-galeria .galeria .img5 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  background-size: cover;
+  background-image: url(../img/banco.jpg);
+}
+.main-galeria .galeria .img6 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  background-size: cover;
+  background-image: url(../img/lapicero.jpeg);
+  background-position: center;
+}
+@media screen and (min-width: 1300px) {
+  .main-galeria .galeria .img6:hover {
+    background-image: url(../img/lapicero-2.jpg);
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 1590px) {
+  .main-galeria .galeria {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 600px);
+  }
+  .main-galeria .galeria .img1 {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    background-image: url(../img/img-carrusel2-img-galeria.jpg);
+    background-size: cover;
+  }
+  .main-galeria .galeria .img2 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    background-image: url(../img/mueble1-2.jpg);
+    background-size: cover;
+    background-position: -300px;
+  }
+  .main-galeria .galeria .img3 {
+    grid-column: 2/3;
+    grid-row: 2/4;
+    background-image: url(../img/proceso1.jpg);
+  }
+  .main-galeria .galeria .img4 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    background-image: url(../img/banco.jpg);
+  }
+  .main-galeria .galeria .img4:hover {
+    background-image: url(../img/banco.jpg) !important;
+    background-size: none;
+  }
+  .main-galeria .galeria .img5 {
+    grid-column: 2/3;
+    grid-row: 4/5;
+    background-image: url(../img/porta_celular.jpg);
+    background-position: center;
+  }
+  .main-galeria .galeria .img6 {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    background-image: url(../img/lapicero.jpeg);
+    background-size: cover;
+    background-position: center;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .main-galeria .galeria {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, 900px);
+  }
+  .main-galeria .galeria .img1 {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    background-image: url(../img/porta_joystick.jpg);
+  }
+  .main-galeria .galeria .img2 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    background-position: center;
+  }
+  .main-galeria .galeria .img3 {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    background-image: url(../img/porta_auriculares.jpg);
+  }
+  .main-galeria .galeria .img4 {
+    grid-column: 1/2;
+    grid-row: 5/6;
+    background-size: cover;
+  }
+  .main-galeria .galeria .img5 {
+    grid-column: 1/2;
+    grid-row: 6/7;
+  }
+  .main-galeria .galeria .img6 {
+    grid-column: 1/2;
+    grid-row: 7/8;
+  }
+}
+@media screen and (max-width: 1020px) {
+  .main-galeria .galeria .img2 {
+    background-image: url(../img/reparacion.jpg);
+  }
+}
+@media screen and (max-width: 840px) {
+  .main-galeria .galeria {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, 400px);
+  }
+  .main-galeria .galeria .img2 {
+    background-size: contain;
+  }
+}
+.main-ubicacion .t-ubi {
+  text-align: center;
+}
+.main-ubicacion .horario-direccion section {
+  margin-top: 20px;
+}
+.main-ubicacion .horario-direccion section article {
+  display: flex;
+  border-bottom: 1px solid #000;
+  padding-top: 10px;
+}
+.main-ubicacion .horario-direccion section article .icono {
+  width: 50px;
+  height: auto;
+  text-align: center;
+}
+.main-ubicacion .horario-direccion section article .icono i {
+  font-size: 30px;
+}
+.main-ubicacion .horario-direccion section article h3 {
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+  font-family: "Titan One", cursive;
+  font-size: 20px;
+}
+@media screen and (max-width: 640px) {
+  .main-ubicacion .horario-direccion section article h3 {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .main-ubicacion .horario-direccion section article h3 {
+    font-size: 16px;
+  }
+}
+.main-ubicacion .img-taller {
+  flex-wrap: nowrap;
+  margin-bottom: 10px;
+}
+.main-ubicacion .img-taller img {
+  width: 50%;
+  border: 2px solid black;
+}
+@media screen and (min-width: 1300px) {
+  .main-ubicacion .img-taller img {
+    filter: grayscale(100%);
+    transition: filter 0.5s;
+  }
+  .main-ubicacion .img-taller img:hover {
+    filter: grayscale(0%);
+    transition: filter 0.5s;
+  }
+}
+
+.main-contacto .sec-formulario {
+  width: 70%;
+  border: 5px solid gray;
+  border-image: linear-gradient(43deg, #000000 25%, #cfa20e 81%);
+  border-image-slice: 1;
+  transition: border-image 0.5s;
+}
+@media screen and (max-width: 425px) {
+  .main-contacto .sec-formulario {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .main-contacto .sec-formulario:hover {
+    border-image: linear-gradient(43deg, #cfa20e 13%, #000000 94%);
+    border-image-slice: 1;
+    transition: border-image 0.5s;
+  }
+}
+.main-contacto .sec-formulario .formulario {
+  color: brown;
+}
+.main-contacto .sec-formulario .formulario .t-cont {
+  text-align: center;
+  text-transform: uppercase;
+}
+.main-contacto .sec-formulario .formulario .borde, .main-contacto .sec-formulario .formulario textarea, .main-contacto .sec-formulario .formulario .metodo-cont, .main-contacto .sec-formulario .formulario textarea {
+  border-color: black;
+}
+.main-contacto .sec-formulario .formulario .borde:focus, .main-contacto .sec-formulario .formulario textarea:focus, .main-contacto .sec-formulario .formulario .metodo-cont:focus, .main-contacto .sec-formulario .formulario textarea:focus {
+  box-shadow: none;
+}
+.main-contacto .sec-formulario .formulario .metodo-cont, .main-contacto .sec-formulario .formulario textarea {
+  border: 1px solid black;
+  border-radius: 6px;
+  padding-left: 10px;
+}
+.main-contacto .sec-formulario .formulario textarea {
+  width: 100%;
+}
+.main-contacto .sec-formulario .formulario .boton input {
+  border-radius: 7px;
+  padding: 5px;
+}
+footer {
+  background-image: url(../img/fondo-nav-footer.svg);
+  border-top: 2px solid #262425;
+}
+@media screen and (max-width: 580px) {
+  footer .m-footer {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 401px) {
+  footer .m-footer {
+    display: none;
+  }
+}
+footer .p-footer {
+  display: none;
+}
+@media screen and (max-width: 580px) {
+  footer .p-footer {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 400px) {
+  footer .p-footer {
+    display: inline-block;
+  }
+}
+footer .redes {
+  width: 100%;
+  font-size: 40px;
+  align-content: center;
+  display: flex;
+}
+@media screen and (max-width: 451px) {
+  footer .redes {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  footer .redes div {
+    padding-bottom: 15px;
+  }
+}
+footer .redes div a {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-decoration: none;
+}
+@media screen and (min-width: 1300px) {
+  footer .redes div a {
+    transition: 0.5s;
+  }
+  footer .redes div a.wpp:hover {
+    color: rgb(14, 193, 67);
+  }
+  footer .redes div a.ig:hover {
+    color: rgb(218, 5, 94);
+  }
+  footer .redes div a.fc:hover {
+    color: rgb(16, 150, 244);
+  }
+  footer .redes div a.wpp::after, footer .redes div a.ig::after, footer .redes div a.fc::after {
+    font-family: "Vollkorn", serif;
+    font-size: 20px;
+    opacity: 0;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+  }
+  footer .redes div a.wpp::after {
+    content: "Nuestro Whatsapp";
+    color: rgb(14, 193, 67);
+  }
+  footer .redes div a.ig::after {
+    content: "Nuestro Instagram";
+    color: rgb(235, 1, 98);
+  }
+  footer .redes div a.fc::after {
+    content: "Nuestro Facebook";
+    color: rgb(16, 150, 244);
+  }
+  footer .redes div a.wpp:hover::after, footer .redes div a.ig:hover::after, footer .redes div a.fc:hover::after {
+    opacity: 1;
+    padding-left: 10px;
+    transition: 0.5s;
+  }
+}
+footer .redes div a i {
+  display: flex;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=estilos.css.map */

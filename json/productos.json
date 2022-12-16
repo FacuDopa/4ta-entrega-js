@@ -1,0 +1,57 @@
+[
+    {
+        "nombre": "Rack para Tv",
+        "descripcion": "Rack para Tv con dos cajones superiores y dos puertas con amplio espacio debajo, es a medida.",
+        "imagenCard": "../img/collage.jpg",
+        "precio": 3000,
+        "alt": "Rack para tv - mueble - madera"
+    },
+
+    {
+        "nombre": "Banco",
+        "descripcion": "Banco de 4 patas, con base redonda, es bajo, disponible en varios colores.",
+        "imagenCard": "../img/banco.jpg",
+        "precio": 4000,
+        "alt": "Banco de madera - madera - madera de pino"
+    },
+
+    {
+        "nombre": "Mesita de luz",
+        "descripcion": "Mesita de luz con un cajón con manija.",
+        "imagenCard": "../img/Cajon.jpg",
+        "precio": 3000,
+        "alt": "Mesita de luz de madera "
+    },
+
+    {
+        "nombre": "Lapicero",
+        "descripcion": "Lapicero con 3 espacios, el color se puede modificar.",
+        "imagenCard": "../img/lapicero.jpeg",
+        "precio": 1000,
+        "alt": "Lapicero de madera - madera - madera de pino"
+    },
+
+    {
+        "nombre": "Camión de juguete",
+        "descripcion": "Camión de madera para chicos, puede ir barnizado y/o pintado.",
+        "imagenCard": "../img/camion.jpeg",
+        "precio": 2500,
+        "alt": "Camion movil de madera - madera de pino - jugete de madera para chicos"
+    },
+
+    {
+        "nombre": "Soporte para Auricular",
+        "descripcion": "Incluye el soporte para el auricular junto con 4 lapiceros y 2 espacios para uso general.",
+        "imagenCard": "../img/porta-auris.jpg",
+        "precio": 5000,
+        "alt": "Soporte para auricular de madera - madera de pino"
+    },
+
+    {
+        "nombre": "Maceta",
+        "descripcion": "Maceta de madera, puede ir pintada y/o barizada,contiene pintura protectora por dentro.",
+        "imagenCard": "../img/macetero.jpeg",
+        "precio": 4000,
+        "alt": "Maceta en madera "
+    }
+]
