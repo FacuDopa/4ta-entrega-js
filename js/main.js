@@ -232,9 +232,9 @@ const agregarCarrito = (id) => {
    Toastify({
       text: `${prodAgregar.nombre} agregado al carrito
       Click para verlo`,
-      destination: "../index.html#seccion-carrito",
+      destination: "../pages/servicios.html#seccion-carrito",
       className: 'noti-toastify',
-      duration: 5000,
+      duration: 4000,
    }).showToast();
 }
 
